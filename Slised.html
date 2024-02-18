@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slided</title>
+    <link rel="stylesheet" href="./Slised.css">
+    <link rel="stylesheet" href="./about.html">
+</head>
+<body>
+ <header class="Box">
+    <div class="main">
+        <div class="NavLink">
+            <div class="Logo"></div>
+            <ul>
+                <a href="#home" class=""><li class="link">Home</li></a>
+                <a href="./about.html"><li>About-Us</li></a>
+                <a href="#solutions"><li>Solutions</li></a>
+                <a href="#contact"><li>Contact</li></a>
+            </ul>
+        </div>
+        <div class="NavLinkright">
+            <button class="btn">
+                Log -In
+
+            </button>
+            <button class="btn">
+                Get Sarted
+
+            </button>
+        </div>
+    </div>
+ </header>
+
+ <div class="live">
+    <div class="livetwo">
+        <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+        
+            <div class="mySlides">
+                <img src="./420140807_924816742693531_4764668901687945937_n.jpg"
+                    style="width:100%; height: 500px; background: #000fff;">
+                <span class="text">
+                    Beautiful Mountains for Set09
+                </span>
+            </div>
+
+            <div class="mySlides">
+                <img src="./420140807_924816742693531_4764668901687945937_n.jpg"
+                    style="width:100%; height: 500px; background: #000fff;">
+                <span class="text">
+                    Beautiful Day for Set09
+                </span>
+            </div>
+
+            <div class="mySlides">
+                <img src="./426411270_436733352020098_6777832102670414830_n.jpg"
+                    style="width:100%; height: 500px; background: #000fff;">
+                <span class="text">
+                    Beautiful Day for Set09
+                </span>
+            </div>
+            <div class="mySlides">
+                <img src="./424743707_232856073215872_5045901212169111117_n.jpg"
+                    style="width:100%; height: 500px; background: #000fff;">
+                <span class="text">
+                    Beautiful Day for Set09
+                </span>
+            </div>
+        <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+ </div>
+ 
+    <script>
+        var slideIndex = 3
+        showDivs(slideIndex);
+
+    function plusDivs (n)  {
+            showDivs(slideIndex += n)
+
+        }
+        function showDivs(n){
+            var i;
+            var x = 
+
+            document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+
+        }
+    </script>
+
+</body>
+</html>

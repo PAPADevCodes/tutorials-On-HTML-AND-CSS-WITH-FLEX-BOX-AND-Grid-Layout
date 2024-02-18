@@ -1,0 +1,394 @@
+<!-- <!DOCTYPE html>
+<html>
+<title>Set08</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    .mySlides {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <div class="w3-container">
+        <h2>Slideshow Caption</h2>
+        <p>Add a caption text for each image slide with the w3-display-* classes (topleft, topmiddle, topright,
+            bottomleft, bottommiddle, bottomright or middle).</p>
+    </div>
+
+    <div class="w3-content w3-display-container" style="display: flex;">
+        <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+
+        <div class="w3-display-container mySlides">
+            <img src="./424743707_232856073215872_5045901212169111117_n.jpg"  style="width:100%; height: 400px;">
+            <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+                French Alps
+            </div>
+        </div>
+
+        <div class="w3-display-container mySlides">
+            <img src="./426411270_436733352020098_6777832102670414830_n.jpg" style="width:100%; height: 300px; background: #000;">
+            <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+                Northern Lights
+            </div>
+        </div>
+
+        <div class="display-container mySlides">
+            <img src="./420140807_924816742693531_4764668901687945937_n.jpg" style="width:100%; height: 500px; background: #000fff;">
+            <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+                Beautiful Mountains
+            </div>
+        </div>
+
+        <div class="display-container mySlides">
+            <img src="./420140807_924816742693531_4764668901687945937_n.jpg" style="width:100%; height: 500px;">
+            <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
+                The Rain Forest
+            </div>
+        </div>
+
+        <div class="w3-display-container mySlides">
+            <img src="img_mountains.jpg" style="width:100%">
+            <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+                Mountains!
+            </div>
+        </div>
+
+       
+        <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>W3.CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .mySlides {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 class="w3-center">Automatic Slideshow</h2>
+
+    <div class="w3-content w3-section" style="max-width:500px">
+        <img class="mySlides" src="./420140807_924816742693531_4764668901687945937_n.jpg" style="width:100%">
+        <img class="mySlides" src="./424743707_232856073215872_5045901212169111117_n.jpg" style="width:100%">
+        <img class="mySlides" src="./426411270_436733352020098_6777832102670414830_n.jpg" style="width:100%">
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+</body>
+</html> 
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<title>Set09</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    .mySlides {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <h2 class="w3-center">HTML slides</h2>
+
+    <div class="w3-content" style="max-width:400px">
+        <div class="mySlides w3-container w3-red">
+            <h1><b>Did You Know?</b></h1>
+            <h1><i>We plan to sell trips to the moon in the 2020s</i></h1>
+        </div>
+
+        <img class="mySlides" src="https://media.istockphoto.com/id/1385320460/vector/blue-abstract-technology-background-vector-data-wave-flow-sound-wave-digital-technology.jpg?s=1024x1024&w=is&k=20&c=ZjKWiWUx8_Z5pDtRY84VWLA8Fh7_asXpSAth6GGFJGc="  style="width:100%">
+
+        <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
+            <p><span class="w3-tag w3-yellow">New!</span>
+            <p>6 Crystal Glasses</p>
+            <p>Only $99 !!!</p>
+        </div>
+
+        <img class="mySlides" src="img_manarola.jpg" style="width:100%">
+    </div>
+
+    <script>
+
+        // var slideIndex = 0;
+        // carousel();
+
+        // function carousel() {
+        //     var i;
+        //     var x = document.getElementsByClassName("mySlides");
+        //     for (i = 0; i < x.length; i++) {
+        //         x[i].style.display = "none";
+        //     }
+        //     slideIndex++;
+        //     if (slideIndex > x.length) { slideIndex = 1 }
+        //     x[slideIndex - 1].style.display = "block";
+        //     setTimeout(carousel, 2000);
+        // }
+
+
+        var slideIndex = 0
+        carousel()
+
+        function  carousel() {
+            var i;
+            var x =
+            document.getElementsByClassName("mySlides")
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > x.length) { slideIndex = 1 }
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000);
+
+        }
+    </script>
+</body> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<title>Set08</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    .mySlides {
+        display: none
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <h2>Slideshow Indicators</h2>
+        <p>An example of using buttons to indicate how many slides there are in the slideshow, and which slide the user
+            is currently viewing.</p>
+    </div>
+
+    <div class="content" style="max-width:800px">
+        <img class="mySlides" src="https://media.istockphoto.com/id/1385320460/vector/blue-abstract-technology-background-vector-data-wave-flow-sound-wave-digital-technology.jpg?s=1024x1024&w=is&k=20&c=ZjKWiWUx8_Z5pDtRY84VWLA8Fh7_asXpSAth6GGFJGc=" style="width:100%">
+        <img class="mySlides" src="https://media.istockphoto.com/id/940877166/vector/cover-design-template-futuristic-landscape-background-3d-low-poly-terrain-cyberspace-grid.jpg?s=1024x1024&w=is&k=20&c=itFpiBiRhUiEopCyua-Y-RfYlL_3bEkaMW_hhdey9Fg=" style="width:100%">
+        <img class="mySlides" src="img_mountains_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="center">
+        <div class="section">
+            <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+            <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+        </div>
+        <button class="button demo" onclick="currentDiv(1)">1</button>
+        <button class="button demo" onclick="currentDiv(2)">2</button>
+        <button class="button demo" onclick="currentDiv(3)">3</button>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-red", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " w3-red";
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+
+    <div class="w3-content w3-section" style="max-width:500px">
+        <p>The w3-animate-fading class animates an element in and out (takes about 10 seconds).</p>
+
+        <img class="mySlides w3-animate-fading" src="https://media.istockphoto.com/id/940877166/vector/cover-design-template-futuristic-landscape-background-3d-low-poly-terrain-cyberspace-grid.jpg?s=1024x1024&w=is&k=20&c=itFpiBiRhUiEopCyua-Y-RfYlL_3bEkaMW_hhdey9Fg=" style="width:100%">
+        <img class="mySlides w3-animate-fading" src="https://media.istockphoto.com/id/1385320460/vector/blue-abstract-technology-background-vector-data-wave-flow-sound-wave-digital-technology.jpg?s=1024x1024&w=is&k=20&c=ZjKWiWUx8_Z5pDtRY84VWLA8Fh7_asXpSAth6GGFJGc=" style="width:100%">
+        <img class="mySlides w3-animate-fading" src="img_rr_03.jpg" style="width:100%">
+        <img class="mySlides w3-animate-fading" src="img_rr_04.jpg" style="width:100%">
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 9000);
+        }
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    .mySlides {
+        display: none
+    }
+
+    .w3-left,
+    .w3-right,
+    .w3-badge {
+        cursor: pointer
+    }
+
+    .w3-badge {
+        height: 13px;
+        width: 13px;
+        padding: 0
+    }
+</style>
+
+<body>
+
+    <div class="w3-container">
+        <h2>Slideshow Indicators</h2>
+        <p>An example of using buttons to indicate how many slides there are in the slideshow, and which slide the user
+            is currently viewing.</p>
+    </div>
+
+    <div class="w3-content w3-display-container" style="max-width:800px">
+        <img class="mySlides" src="https://media.istockphoto.com/id/1385320460/vector/blue-abstract-technology-background-vector-data-wave-flow-sound-wave-digital-technology.jpg?s=1024x1024&w=is&k=20&c=ZjKWiWUx8_Z5pDtRY84VWLA8Fh7_asXpSAth6GGFJGc=" style="width:100%">
+        <img class="mySlides" src="img_mountains_wide.jpg" style="width:100%">
+        <img class="mySlides" src="https://media.istockphoto.com/id/1385320460/vector/blue-abstract-technology-background-vector-data-wave-flow-sound-wave-digital-technology.jpg?s=1024x1024&w=is&k=20&c=ZjKWiWUx8_Z5pDtRY84VWLA8Fh7_asXpSAth6GGFJGc=" style="width:100%">
+        <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
+            style="width:100%">
+            <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+            <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-white", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " w3-white";
+        }
+    </script>
+
+</body>
+</html> -->
