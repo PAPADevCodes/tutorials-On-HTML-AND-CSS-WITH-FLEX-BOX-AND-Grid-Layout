@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grid</title>
+
+    <style>
+  .wrapper{
+    display: grid;
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    /* grid-template-columns: repeat(4, 1fr 2fr); */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:1em;
+    grid-auto-rows:minmax(100px, auto);
+    /* justify-content: start; */
+  }
+
+  .nested{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    grid-auto-rows:70px;
+  }
+
+  .nested > div{
+    border:  1px solid #444;
+    padding: 1em;
+  }
+
+         .wrapper > div{
+            background-color: #eee;
+            padding: 1em;
+        }
+
+        .wrapper > div:nth-child(odd){
+            background-color: #ddd;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+<div class="nested">
+  <div>Lorem</div>
+  <div>Lorem</div>
+  <div>Lorem</div>
+</div>
+<div>
+    Lorem ipsum dolor sit.
+</div>
+<div>
+    Lorem ipsum dolor sit.
+    Lorem ipsum dolor sit.
+    Lorem ipsum dolor sit.
+    Lorem ipsum dolor sit.
+    Lorem ipsum dolor sit.
+    Lorem ipsum dolor sit.
+    Lorem ipsum dolor sit.
+    Lorem ipsum dolor sit.
+    Lorem ipsum dolor sit.
+    Lorem ipsum dolor sit.
+    Lorem ipsum dolor sit.
+    Lorem ipsum dolor sit.
+    Lorem ipsum dolor sit.
+    Lorem ipsum dolor sit.
+    Lorem ipsum dolor sit.
+</div>
+<div>
+    Lorem ipsum dolor sit.
+</div>
+<div>
+    Lorem ipsum dolor sit.
+</div>
+<div>
+    Lorem ipsum dolor sit.
+</div>
+<div>
+    Lorem ipsum dolor sit.
+</div>
+</body>
+</html>
